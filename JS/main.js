@@ -11,24 +11,9 @@ import { ProductSwiper } from "./productsSwiper.js";
 
 
 // !!=======================================START MAINJS============================================>
-function checkLoadingContentToDisplayLoader() {
-  setTimeout(() => {
-    if (document.readyState === 'complete') {
-      if (loader) {
-        loader.classList.add('d-none');
-      }
-    } else {
-      window.addEventListener('load', () => {
-        if (loader) {
-          loader.classList.add('d-none');
-        }
-      });
-    }
-  },2000)
-}
 
 
-// !!=======================================END MAINJS============================================>
+
 
 
 
@@ -40,7 +25,7 @@ console.log(loader);
 const myNavbar = new NavBar();
   
   
-// checkLoadingContentToDisplayLoader();
+checkLoadingContentToDisplayLoader();
 
 
 // !!=======================================END MAIN_DECLARATIONS============================================>
@@ -105,6 +90,25 @@ else if(!window.location.href.includes("profile")){
 
 }
 // ??=======================================END MAINPAGE============================================>
+
+// !!=======================================START MAINJS============================================>
+  function checkLoadingContentToDisplayLoader() {
+    setTimeout(() => {
+      if (document.readyState === 'complete') {
+        if (loader) {
+          loader.classList.add('d-none');
+        }
+      } else {
+        window.addEventListener('load', () => {
+          if (loader) {
+            loader.classList.add('d-none');
+          }
+        });
+      }
+    },2000)
+  }
+  
+
   (function displayProductPageData(){
     if (window.location.href.includes("workId")) {
       headerSubHeading.innerHTML = `<a href="index.html" >Home</a> / <a href="#">Product</a>`;
@@ -112,7 +116,7 @@ else if(!window.location.href.includes("profile")){
     
     }
     })();
-    
+// !!=======================================END MAINJS============================================>  
 
 
 
