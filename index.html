@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link rel="icon" href="./Images/Icons/favicon.ico">
+
+
+  <!--? ======================================STYLESHEETS================================ -->
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/devfoilioStyleSheet.css">
+  <!--? ======================================STYLESHEETS================================ -->
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navId" class="position-relative">
+
+  <div class="loader position-fixed top-0 end-0 bottom-0 start-0 bg-black d-flex d-none">
+   
+        <svg viewBox="0 0 100 100">
+          <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+            <!-- left line -->
+            <path d="M 21 40 V 59">
+              <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 21 59; 180 21 59"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- right line -->
+            <path d="M 79 40 V 59">
+              <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 79 59; -180 79 59"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- top line -->
+            <path d="M 50 21 V 40">
+              <animate
+              attributeName="d"
+              values="M 50 21 V 40; M 50 59 V 40"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- btm line -->
+            <path d="M 50 60 V 79">
+              <animate
+              attributeName="d"
+              values="M 50 60 V 79; M 50 98 V 79"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- top box -->
+            <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+            <animate
+              attributeName="stroke"
+              values="rgba(255,255,255,1); rgba(100,100,100,0)"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- mid box -->
+            <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z"/>
+            <!-- btm box -->
+            <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+            <animate
+              attributeName="stroke"
+              values="rgba(100,100,100,0); rgba(255,255,255,1)"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              values="0 0; 0 -19"
+              dur="2s"
+              repeatCount="indefinite" />
+          </g>
+        </svg>
+     
+  </div>
+
+<!--^^=======================================Main============================================  -->
+    <div class="arrow-up-icon">
+      <a href="#home" class="arrow-up-icon"><i class="fa-solid fa-arrow-up  position-absolute  "></i></a>
+    </div>
+<!--^^=======================================Main============================================  -->
+
+  <!--^^=======================================START NAVBAR============================================  -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark p-1 bg-transparent myNavbar">
+    <div class="container-fluid px-5 mx-5 ">
+      <a class="navbar-brand mx-md-4 mx-sm-0" href="index.html">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse px-5 " id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Portfolio</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+              <li><a class="dropdown-item" href="mailto:momenmamdouhw@gmail.com">Contact me</a></li>
+              <li><hr class="dropdown-divider"></li>
+             
+            </ul>
+          </li>
+
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--^^=======================================END NAVBAR============================================  -->
+
+  <!--^^=======================================START HEADER============================================  -->
+
+  <header class="header-section  d-flex align-items-center justify-content-center " id="home">
+
+    <div class="container header-content">
+      <div class="header-heading text-white d-flex align-items-center justify-content-center flex-column text-center">
+        <h1 class="header-title pb-3 ">Data from JS</h1>
+        <h3 class="header-animation-ele"><span id="element"></span></h3>
+        <h4 class="headerSubHeading my-3">  </h4>
+      </div>
+    </div>
+
+  </header>
+
+  <!--^^=======================================END HEADER============================================  -->
+
+  <!--^^=======================================START ABOUT-SECTION============================================  -->
+  <section class="about-section py-5 my-5 " id="about">
+
+    <div class="container about-card">
+
+      <div class="about-content row">
+
+        <div class="col-md-6 about-skills ">
+          <div class="row about-image-data w-100 justify-content-between">
+
+            <div class="col-md-4 about-image pb-4">
+              <img srcset="./Images/aboutImage.jpg" alt="Mo'men Mamdouh Cv Image" class="rounded-3 w-100">
+            </div>
+
+            <div class="col-md-8 about-content-card overflow-hidden ">
+                <h6><strong>Name:</strong> <span>Mo'men Mamdouh</span></h6>
+                <h6><strong>Profile:</strong> <span>Front-End Developer</span></h6>
+                <h6><strong>Email:</strong> <span><a
+                      href="mailto:momenmamdouhw@gmail.com">momenmamdouhw@gmail.com</a></span></h6>
+                <h6><strong>Phone:</strong> <span><a href="tel:+201146459858">+20 1146459858</a></span></h6>
+            </div>
+
+          </div>
+
+          <div class="row about-skills py-3 ">
+              <div class="col-sm-12 skills-heading pt-3">
+                  <h5>Skills:</h5>
+              </div>  
+              <div class="col-sm-12 skills-bars ">
+                    Data From Js
+              </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-6 about-me-column">
+
+          <div class="col-sm-12 about-me-content">
+            <h3 class="about-me-title position-relative mb-4">About me</h3>
+
+            <div class="d-flex flex-column w-100 justify-content-between">
+
+                <p class="about-me-description py-2">I am a passionate and detail-oriented front-end developer with a strong
+                  foundation in modern web technologies. With expertise in HTML, CSS, and JavaScript, I specialize in
+                  creating interactive, responsive, and user-friendly web interfaces that deliver seamless experiences
+                  across devices.</p>
+    
+                <p class="about-me-description py-2">I have extensive experience working with frameworks like React and
+                  Angular,
+                  alongside tools like Git and Webpack. My focus lies in clean, maintainable code, performance optimization,
+                  and ensuring cross-browser compatibility. I thrive in team environments, collaborating closely with
+                  designers and back-end developers.</p>
+    
+                <p class="about-me-description py-2">I aim to continuously improve my skills and contribute to building
+                  innovative, impactful web applications that align with user needs and industry standards.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+  <!--^^=======================================END ABOUT-SECTION============================================  -->
+
+  <!--^^=======================================START SERVICES-SECTION============================================  -->
+  <section class="services-section py-5 my-5 " id="services">
+
+    <div class="container services-card">
+
+      <div class="row services-heading heading-row text-center position-relative mb-3">
+          <h2>Services</h2>
+          <p class="fw-medium">Expert front-end development, responsive design, and seamless user experiences.</p>
+      </div>
+
+      <div class="row g-4 services-cards py-5">
+          Data From Js
+      </div>
+
+    </div>
+
+  </section>
+  <!--^^=======================================END SERVICES-SECTION============================================  -->
+
+
+  <!--^^=======================================START SERVICES-SECTION============================================  -->
+  <section class="behind-layer-area counter-section py-5 my-5 " id="">
+    <div class="overLayer"></div>
+    <div class="container ">
+
+      <div class="row  counter-items py-5">
+          Data From Js
+      </div>
+
+    </div>
+
+  </section>
+  <!--^^=======================================END SERVICES-SECTION============================================  -->
+
+
+  <!--^^=======================================START PORTFOLIO-SECTION============================================  -->
+  <section class="portfolio-section py-5 my-5 " id="work">
+
+    <div class="container ">
+
+      <div class="row portfolio-heading heading-row text-center position-relative mb-3">
+        <h2>Portfolio</h2>
+        <p class="fw-medium">Our portfolio showcases diverse products, highlighting quality, innovation, and
+          craftsmanship.</p>
+      </div>
+
+      <div class="row  portfolio-items py-5 g-3">
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <div id="myModal" class="portfolioModal modal d-flex top-0 bottom-0 start-0 end-0 bg-black d-none">
+    <div class="modal-content">
+      <div class="modal-close-btn d-flex justify-content-end p-4">
+
+        <i id="myModalCloseBtn" role="button" class="fa-solid fa-close fa-2x "></i>
+      </div>
+
+      <div class="modal-image d-flex   justify-content-between align-items-center">
+        <i id="myModalArrowLeftIcon" role="button" class="fa-solid fa-arrow-left  fa-2x px-5 pe-auto"> </i>
+        <img class="w-50" srcset="./Images/WorkSection/Mobile-Phone.jpg" alt="">
+        <i id="myModalArrowRightIcon" role="button" class="fa-solid fa-arrow-right fa-2x px-5 pe-auto"> </i>
+      </div>
+
+
+    </div>
+
+  </div>
+  <!--^^=======================================END PORTFOLIO-SECTION============================================  -->
+
+  <!--^^=======================================START SLIDER-SECTION============================================  -->
+  <section class="behind-layer-area slider-section py-5 my-5 position-relative" id="slider">
+    <div class="overLayer"></div>
+    <div class="container ">
+
+      <div class="row  slider-items py-5 ">
+        <!-- ? Slider main container -->
+        <div class="swiper z-3">
+          <!--? Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!--? Slides -->
+            Data From Js
+          </div>
+          <!--? If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!--^^=======================================END SLIDER-SECTION============================================  -->
+
+  <!--^^=======================================START BLOG-SECTION============================================  -->
+  <section class="blog-section py-5 my-5" id="blog">
+
+    <div class="container blog-content">
+
+      <div class="row blog-heading heading-row text-center position-relative mb-3">
+          <h2>Blog</h2>
+          <p class="fw-medium">Explore innovative ideas, tips, and insights in our latest blog posts.</p>
+      </div>
+
+      <div class="row g-4 blog-cards py-5 g-3"> 
+        Data From Js
+      </div>
+
+    </div>
+
+  </section>
+  <!--^^=======================================END BLOG-SECTION============================================  -->
+
+
+  <!--^^=======================================START CONTACTUS-SECTION============================================  -->
+  <section class="behind-layer-area contact-us-section py-5 mt-5 position-relative text-black" id="contact">
+    <div class="container ">
+
+      <div class="form-card bg-white">
+
+          <div class="row">
+
+              <div class="col-md-6 p-2 contactUsForm-col">
+                <div class="col-sm-12 contactUsForm-heading">
+                  <div class="form-heading  p-4 px-5">
+                    <h3 class="">Message Us</h3>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 contactUsForm-inputs">
+                  <div class="form-inputs d-flex flex-column gap-3 column-gap-3 mb-3 px-5">
+
+                    <input type="text" name="Name" class="form-control text-capitalize userName" placeholder="Your Name" required checked>
+                    <p class="alert alert-danger m-0 p-1 w-50 text-center m-auto d-none w-100" role="alert">Name must be at least 2 characters</p>
+
+                    <input type="email" name="Email" class="form-control userEmail" placeholder="Your Email" required>
+                    <p class="alert alert-danger m-0 p-1 w-50 text-center m-auto d-none w-100" role="alert ">Email ex. name@mail.com</p>
+
+                    <input type="text" name="Subject" class="form-control text-capitalize userSubject" placeholder="Subject" required>
+                    <p class="alert alert-danger m-0 p-1 w-50 text-center m-auto d-none" role="alert ">Can't be empty</p>
+
+                    <textarea name="Comment" rows="4" class="form-control userComment" placeholder="Message..." id=""></textarea>
+
+                    <button class="btn text-center m-auto px-4 py-3 rounded-5 submationBtn" >Send Message</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-md-6 p-2 contactUsContent-col">
+                  <div class="col-sm-12">
+                    <div class="form-heading py-4  ">
+                      <h3 class="">Get in Touch</h3>
+                    </div>
+                  </div>
+
+                <div class="col-sm-12  form-contact-section ">
+                      <div class="form-contact-section-paragrapgh ">
+                          <p>We’d love to hear from you! Whether you have a question, need assistance, or want to collaborate, feel
+                            free to reach out. Your inquiries are important, and we’ll respond promptly.</p>
+                      </div>
+
+                      <ul class="list-unstyled contact-list my-4">
+                          <li><i class="fa-solid fa-location-dot"></i> <a>Maddi Cairo Egypt</a></li>
+                          <li><i class="fa-solid fa-mobile-screen"></i> <a href="tel:+201146459858">+20 1146459858</a></li>
+                          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:momenmamdouhw@gmail.com">momenmamdouhw</a></li>
+                      </ul>
+
+                      <ul class="list-unstyled social-list-icon d-flex">
+                          <li class="me-3"><a href="https://github.com/Momen-Mamdouh/"><i class="fa-brands fa-github"></i></a></li>
+                          <li class="me-3"><a href="https://www.linkedin.com/in/mo-men-mamdouh-aa5baa20a/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                      </ul>
+                </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+      <div id="formModal" class="modal  d-flex top-0 bottom-0 start-0 end-0 bg-black d-none d-flex">
+        <!-- Modal content -->
+        <div class="modal-dialog modal-confirm position-absolute  translate-middle">
+          <div class="modal-content bg-white">
+            <div class="modal-header">
+              <div class="icon-box">
+                <i class="material-icons">&#xE876;</i>
+              </div>
+              <button type="button" class="close closing" data-dismiss="modal" aria-hidden="true" > <i class="fas fa-close"></i> </button>
+            </div>
+            <div class="modal-body text-center">
+              <h4>Thank you!</h4>	
+              <p>Your Submission has been sent Successfully.</p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+
+  </section>
+  <!--^^=======================================END CONTACTUS-SECTION============================================  -->
+
+   <!--^^=======================================START FOOTER-SECTION============================================  -->
+   <footer class="footer-section py-4 text-white" id="footer">
+
+      <div class="container ">
+      <div class="footer-content text-center">
+          <p>© Copyright <strong>DevFolio.</strong> All Rights Reserved</p>
+          <p>Designed and developbed by Mo'men Mamdouh</p>
+      </div>
+
+      </div>
+   
+   </footer>
+
+
+  <!--^^=======================================END FOOTER-SECTION============================================  -->
+
+
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="./JS/typeAnimation.js"></script>
+
+  <script type="module" src="./JS/main.js"></script>
+
+
+</body>
+
+
+</html>

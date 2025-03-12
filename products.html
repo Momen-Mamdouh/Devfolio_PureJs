@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+
+  <link rel="icon" href="./Images/Icons/favicon.ico">
+
+
+
+  <!--? ======================================STYLESHEETS================================ -->
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/devfoilioStyleSheet.css">
+  <!--? ======================================STYLESHEETS================================ -->
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navId">
+
+  <!--^^=======================================START NAVBAR============================================  -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark p-2 bg-transparent myNavbar ">
+    <div class="container-fluid px-5 mx-5 ">
+      <a class="navbar-brand mx-5 fw-bold fs-2 " href="index.html">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse px-5" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#work">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#blog">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="profile.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="profile.html#myWork">My work</a></li>
+              <li><a class="dropdown-item" href="profile.html#contact">Contact me</a></li>
+              <li><hr class="dropdown-divider"></li>
+             
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--^^=======================================END NAVBAR============================================  -->
+
+  <!--^^=======================================START HEADER============================================  -->
+  <header class="header-section  d-flex align-items-center justify-content-center" id="home">
+
+    <div class="container ">
+
+      <div class="header-content text-white d-flex align-items-center justify-content-center flex-column">
+        <h1 class="header-title pb-3">I Am Mo'men Mamdouh</h1>
+        <h3><span id="element"></span></h3>
+        <h4 class="headerSubHeading my-3">  </h4>
+      </div>
+      
+
+    </div>
+
+  </header>
+  <!--^^=======================================END HEADER============================================  -->
+
+
+ <!--^^=======================================START PRODUCTS-SECTION============================================  -->
+
+  <section class="behind-layer-area products-section-slider py-5 ">
+      <div class="container mx-auto row products-row my-5 align-items-center">
+        <div class="col-md-8 col-sm-12 products-slider-col">
+              <!-- ? Slider main container -->
+            <div class="swiper z-3">
+                <!--? Additional required wrapper -->
+                <div class="swiper-wrapper ">
+                  <!--? Slides -->
+                  Data From Js
+                </div>
+                <!--? If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 product-content-col  justify-content-center">
+          <div class="row product-content-row gap-3  ">
+                <div class="col-12 product-info-card-col">
+                    <div class="col-12 ">
+                      <div class="card product-info-card  d-flex flex-column justify-content-center  p-3">
+                          <div class="card-heading border-bottom p-1">
+                              <h5>Project Info</h5>
+                          </div>
+                          <p class="px-2 pb-2">
+                              <h6 class="pt-2 product-info-card-heading">Category: <span class="fs-6 ps-2">Web Development</span></h6>
+                              <h6 class="pt-2 product-info-card-heading">Client: <span class="fs-6 ps-2">Practice</span></h6>
+                              <h6 class="pt-2 product-info-card-heading">Project Date: <span class="fs-6  ps-2">Updated in March 2025</span</h6>
+                              <h6 class="pt-3 product-info-card-heading">Linked in Post: <a class="fs-6 ps-2 " href="https://www.linkedin.com/in/mo-men-mamdouh-aa5baa20a/">Linkedin Profile</a></h6>
+                          </p>
+                      </div>
+                </div>
+              </div>
+          
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+<!--^^=======================================END PRODUCTS-SECTION============================================  -->
+
+
+   <!--^^=======================================START FOOTER-SECTION============================================  -->
+   <footer class="footer-section py-4 text-white" id="footer">
+
+    <div class="container ">
+    <div class="footer-content text-center">
+        <p>© Copyright <strong>DevFolio.</strong> All Rights Reserved</p>
+        <p>Designed and developbed by Mo'men Mamdouh</p>
+    </div>
+
+    </div>
+ 
+ </footer>
+
+
+<!--^^=======================================END FOOTER-SECTION============================================  -->
+
+
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="./JS/typeAnimation.js"></script>
+
+  <script type="module" src="./JS/main.js"></script>
+
+
+</body>
+
+
+</html>

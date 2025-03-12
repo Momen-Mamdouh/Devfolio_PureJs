@@ -1,0 +1,834 @@
+@font-face {
+    font-family: mainFont;
+    src: url(../Font/Merriweather-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+:root{
+    --white-color: #fff;
+    --black-color: #000000;
+    --main-text-color: #4a4b4b;
+    --primary-color: #2e5077;
+    --form-modal-color:#434e65;
+    --modal-closing-red: rgb(255, 1, 1);
+    --modal-yellow-color:#FFB200;
+    --profile-bg:#151634;
+    --profile-secondary-bg: #F8F9FA;
+    --arrow-up-color: #1366D4;
+    --main-bg-color: #f6f4f0;   
+    --services-icon-hover-border-color:#bed1e7 ;
+    --main-transition: 0.5s ease-in-out;
+    --main-border-radius: 5px;
+    --service-card-border-radius: 15px;
+}
+body{
+    background-color: var(--main-bg-color);
+    font-family: mainFont;
+}
+.loader{
+    z-index: 999999999999999;
+}
+.loader svg {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 200px;
+	width: 200px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+
+.heading-row h2{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.heading-row p{
+    color: var(--main-text-color);
+    font-size: 1.25rem;
+    width: 50%;
+    margin: auto;
+}
+
+.heading-row::after{
+    position: absolute;
+    content:"";
+    top: 110%;
+    left: 50%;
+    width: 10%;
+    border-bottom: var(--primary-color) 5px solid;
+    transform: translate(-50%,-50%);
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+    
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.arrow-up-icon svg{
+    right: 3%;
+    top: 98.5%;
+    z-index: 99;
+    background-color:var(--black-color);
+    color: var(--arrow-up-color);
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.section-icon{
+    box-shadow: 0 0 0 10px var(--primary-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-top: 1.25rem;
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+.section-icon svg{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    transition: color var(--main-transition);
+    -webkit-transition: color var(--main-transition);
+    -moz-transition: color var(--main-transition);
+    -ms-transition: color var(--main-transition);
+    -o-transition: color var(--main-transition);
+}
+
+.behind-layer-area{
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--white-color);
+}
+.behind-layer-area .overLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: var(--primary-color);
+}
+.container{
+    width: 100% !important;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+
+/*&& ================================================================================================= */
+
+/** ========================================START NavBar======================================= */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+
+
+.navbar-brand{
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+.nav-item{
+    position: relative;  
+    padding: 0 0.6rem;
+    text-align: center;
+}
+
+.navbar .nav-link, .navbar-nav .nav-link.active{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-color); 
+    text-align: center;   
+}
+
+.navbar-nav .nav-link.active{
+    position: relative;
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+
+.navbar-nav .nav-item::after, .navbar .active::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    border-bottom: 3px solid var(--white-color);
+    border-radius:var(--main-border-radius);
+    -webkit-border-radius:var(--main-border-radius);
+    -moz-border-radius:var(--main-border-radius);
+    -ms-border-radius:var(--main-border-radius);
+    -o-border-radius:var(--main-border-radius);
+}
+
+.navbar-nav .nav-item::after{
+    left: 20%;
+    width: 0;
+    transition: width var(--main-transition);
+    -webkit-transition: width var(--main-transition);
+    -moz-transition: width var(--main-transition);
+    -ms-transition: width var(--main-transition);
+    -o-transition: width var(--main-transition);
+}
+
+.navbar .active::after{
+    left: 10%;
+    width: 80%; 
+}
+
+.navbar-nav .nav-item:hover::after{
+    width: 60%;
+ }
+
+.myNavbar{
+    background-color: #1e3d61;
+    padding: .8rem;
+}
+
+
+/** ========================================END NavBar======================================= */
+
+/*&& ================================================================================================= */
+
+/** ========================================START Header======================================= */
+header{
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0,0.6)), url(../Images/backgroundImages/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(34, 40, 49);
+}
+
+header .header-title{
+    font-size: 3.5rem;
+}
+
+header .header-animation-ele{
+    font-size: 2rem;
+}
+
+header .headerSubHeading a{
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+header .headerSubHeading a:hover{
+    color: var( --modal-yellow-color);
+}
+
+/** ========================================End Header======================================= */
+
+/*&& ================================================================================================= */
+
+/** ========================================Start AboutSection======================================= */
+
+.about-content{
+    padding: 1.5rem;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);;
+    border-radius:var(--main-border-radius);
+    -webkit-border-radius:var(--main-border-radius);
+    -moz-border-radius:var(--main-border-radius);
+    -ms-border-radius:var(--main-border-radius);
+    -o-border-radius:var(--main-border-radius);
+
+}
+
+.about-content-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(246, 244, 240,0.2);
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+}
+.about-content-card h6 span{
+    color: var(--main-text-color);
+    padding-left: 0.4rem;
+}
+
+.about-content-card h6 span a{
+    color: var(--main-text-color);
+}
+
+.skills-bars .progress{
+    margin: 1.5rem 0;
+    height: 1.5rem;
+}
+
+.skills-bars .progress .progress-bar{
+   font-size: 1rem;
+   background-color: var(--primary-color);
+}
+
+.about-me-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 15%;
+    border-bottom: 0.25rem solid var(--primary-color);
+    border-radius:var(--main-border-radius);
+    -webkit-border-radius:var(--main-border-radius);
+    -moz-border-radius:var(--main-border-radius);
+    -ms-border-radius:var(--main-border-radius);
+    -o-border-radius:var(--main-border-radius);
+}
+
+.about-me-description{
+    font-size: 1.25rem;
+    color: var(--main-text-color);
+
+}
+
+/** ========================================End AboutSection======================================= */
+
+
+/*&& ================================================================================================= */
+
+
+/** ========================================Start ServicesSection======================================= */
+
+.service-card{
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+    border-radius: var(--service-card-border-radius);
+    -webkit-border-radius: var(--service-card-border-radius);
+    -moz-border-radius: var(--service-card-border-radius);
+    -ms-border-radius: var(--service-card-border-radius);
+    -o-border-radius: var(--service-card-border-radius);
+    padding: .5rem;
+    height: 100%;
+}
+.service-card:hover .section-icon{
+    box-shadow: 0 0 0 10px var(--services-icon-hover-border-color);
+    background-color: var(--primary-color);
+}
+.service-card:hover .section-icon svg{
+    color: var(--white-color);
+}
+.service-card p{
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/** ========================================End ServicesSection======================================= */
+
+/** ========================================Start CounterSection======================================= */
+
+.behind-layer-area.counter-section{
+    background-image: url(../Images/backgroundImages/counters-bg.jpg);
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+       
+}
+.counter-card .section-icon{
+    box-shadow: 0 0 0 10px var(--services-icon-hover-border-color);
+    background-color: rgba(46, 80, 119,0.7);
+}
+.counter-card .section-icon svg{
+    padding: 1.5rem;
+}
+
+.counter-column{
+    z-index: 999;
+}
+
+/** ========================================End CounterSection======================================= */
+
+/** ========================================Start PortfolioSection======================================= */
+
+.portfolio-card .card-body svg{
+    color: var(--black-color);
+}
+
+.portfolio-image {
+    overflow: hidden;
+}
+.portfolio-image img{
+    transition: transform var(--main-transition);
+    -webkit-transition: transform var(--main-transition);
+    -moz-transition: transform var(--main-transition);
+    -ms-transition: transform var(--main-transition);
+    -o-transition: transform var(--main-transition);
+}
+
+.portfolio-image:hover img{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.portfolio-card .card-category, .portfolio-card .card-body svg{
+    color: var(--primary-color);
+}
+
+/** ========================================End PortfolioSection======================================= */
+
+
+/** ========================================Start SliderSection======================================= */
+
+.behind-layer-area.slider-section{
+    background-image: url(../Images/backgroundImages/slider-bg.jpg);
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.mainSwiper .slider-image img{
+    width: 50%;
+    height: 50%;
+    border-radius:50%;
+}
+.swiper-pagination .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--white-color) ;
+}
+.products-section-slider .swiper-pagination .swiper-pagination-bullet{
+    background-color: var(--primary-color);
+}
+
+/** ========================================End SliderSection======================================= */
+
+
+/** ========================================Start BlogSection======================================= */
+.blog-cards .card-body a, .blog-cards .post-author a{
+    transition: color var(--main-transition);
+    -webkit-transition: color var(--main-transition);
+    -moz-transition: color var(--main-transition);
+    -ms-transition: color var(--main-transition);
+    -o-transition: color var(--main-transition);
+}
+.blog-cards .card{
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+.blog-cards .card-image img{
+    width: 100%;
+}
+.blog-cards .card-box{
+    position: absolute;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    background-color: var(--primary-color);
+    padding: .5rem 1.5rem;
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+    color: var(--white-color);
+    text-align: center;
+}
+.blog-cards .card-title{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.blog-cards .card-body a{
+    color: var(--black-color);
+}
+.blog-cards .card-body p{
+    color: var(--main-text-color);
+    width: 100%;
+    font-weight: 500;
+    font-size: .9rem;
+}
+.blog-cards .post-author a{
+    font-weight: 500;
+}
+.blog-cards .card-body a:hover, .post-author a:hover {
+    color: var(--primary-color);
+}
+
+.post-author img{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding-right: 0  ;
+}
+.post-author a,  .posted-time{
+    color: var(--main-text-color);
+}
+
+/** ========================================End BlogSection======================================= */
+
+/** ========================================Start ContactUsSection======================================= */
+.behind-layer-area.contact-us-section{
+    background-image: url(../Images/backgroundImages/contactUs-bg.jpg);
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1); 
+    background-color: var(--primary-color);  
+}   
+
+.form-card{
+    position: relative;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+}
+
+.form-heading h3{
+    position: relative;
+    font-size: 1.75rem;
+}
+.form-heading h3::after{
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 20%;
+    border-bottom: 4px var(--primary-color) solid;
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+}
+
+.form-inputs button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+.form-inputs button:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 0 0 4px #cde1f8;
+}
+
+.form-contact-section p {
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    color: var(--main-text-color);
+}
+
+
+.contact-us-section ul li {
+    margin: .5rem 0;
+    font-size: 1.1rem;
+}
+.contact-us-section ul li svg{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+.contact-list a{
+    color: var(--main-text-color);
+    padding: 0 .5rem;
+}
+
+.social-list-icon li{
+    padding: .5rem;
+    box-shadow: 0 0 0 3px #0078ff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+.social-list-icon li:hover{
+    background-color: var(--primary-color);
+    box-shadow: 0 0 0 3px #cde1f8;
+}
+.social-list-icon li svg{
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+.social-list-icon li:hover svg{
+   color: var(--white-color);
+}
+
+/** ========================================End ContactUsSection======================================= */
+
+
+footer{
+    background-color: var(--primary-color);
+}
+
+
+/** ========================================Start Modal======================================= */
+
+/*?? ========================================Start PortfolioModal======================================= */
+
+
+.modal{
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    overflow: hidden !important;
+}
+.modal-content{
+    background: transparent;
+    background-color: black;
+    
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.modal-content svg{
+    color: white;
+}
+
+#myModalArrowLeftIcon .dark-text svg{
+    --bs-text-opacity:1;color:rgba(var(--bs-dark-rgb),var(--bs-text-opacity))!important;
+}
+/*?? ========================================Start PortfolioModal======================================= */
+
+/*^^ ========================================Start FormModal======================================= */
+
+.modal-confirm {		
+    color: var(--form-modal-color);
+    width: 525px;
+    margin: 30px auto;
+    top: 45%;
+    left: 50%;
+}
+.modal-confirm .modal-content {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+.modal-confirm .modal-header {
+    background: var(--modal-yellow-color);
+    border-bottom: none;   
+    position: relative;
+    text-align: center;
+    margin: -20px -20px 0;
+    border-radius: 5px 5px 0 0;
+    padding: 35px;
+}
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+    background-color: var(--form-modal-color);
+}
+.modal-confirm .close svg{
+    color: var(--white-color);
+
+}
+.modal-confirm .close:hover {
+    background-color: var(--modal-closing-red);
+}
+.modal-confirm .icon-box {
+    color: var(--white-color);		
+    width: 95px;
+    height: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 9;
+    border: 5px solid var(--white-color);
+    padding: 15px;
+    text-align: center;
+}
+.modal-confirm .icon-box i {
+    font-size: 64px;
+    margin: -4px 0 0 -4px;
+}
+/*^^ ========================================End FormModal======================================= */
+
+/** ========================================End Modal======================================= */
+
+/*?? ========================================Start Product======================================= */
+
+.behind-layer-area.products-section{
+    background-image: url(../Images/backgroundImages/productSwiper.jpg);
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.3);   
+}
+.product-info-card, .slider-image {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.3);
+}
+.product-info-card-heading{
+    color: var(--main-text-color);
+}
+.product-info-card-heading a{
+    color: var(--black-color);
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+.product-info-card-heading a:hover {
+    color: var(--primary-color);
+}
+/*?? ========================================End Product======================================= */
+
+/*&& ========================================Start Profile======================================= */
+
+.profile-section{
+    background-color: var(--profile-bg);
+}
+.profile-section .heading-nav-row a, .profile-card-contact-btns button:hover a, .profile-info-link {
+    color: var(--black-color);
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+.profile-section .heading-nav-row a:hover{
+    color: var(--primary-color);
+}
+.profile-navbar{
+    background-color: var(--profile-secondary-bg);
+}
+.profile-card-contact-btns button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+}
+.profile-card-contact-btns button:hover{
+    background-color: var(--modal-yellow-color);
+    color: var(--white-color);
+}
+.frontend-card .skill-heading{
+    font-size: .8rem;
+}
+.frontend-card .progress{
+    height: .3rem;
+}
+
+
+/*?&& ========================================End Profile======================================= */
+
+
+@media (max-width: 576px) {
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .arrow-up-icon svg{
+        top: 99.5%;
+        right: 1%;      
+    }
+
+    .navbar-collapse {
+        transition: all 0.0s ease;
+        -webkit-transition: all 0.0s ease;
+        -moz-transition: all 0.0s ease;
+        -ms-transition: all 0.0s ease;
+        -o-transition: all 0.0s ease;
+    }
+    .navbar-collapse.show{
+        background-color: rgba(30, 30, 30,.8) !important;
+    }
+
+    .contactUsContent-col .form-heading{
+        padding: 2rem;
+    }
+    .form-contact-section{
+        margin-bottom: 1.5rem;
+        padding: 0 2.5rem;
+    }
+    .form-contact-section-paragrapgh p{
+        padding-right: 1.5rem;
+    }
+    .social-list-icon{
+        justify-content: center;
+    }
+    
+}
+
+
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-xl, .container-xxl {
+        max-width: 1450px;
+    }
+    
+}
