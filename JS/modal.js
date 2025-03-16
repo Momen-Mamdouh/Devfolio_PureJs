@@ -77,22 +77,7 @@ export class MyModal{
         });
     } 
 
-    // myModalClciking(){
-    //     document.getElementById('myModal').addEventListener('click',  (e)=> {
-    //         const currentModalImageSrc = this.myModalImage.getAttribute("srcset");
-    //          if (e.target.closest('#myModalCloseBtn')) {
-    //            this.closeModal();
-    //          }
-
-    //          if (e.target.closest('#myModalArrowLeftIcon')) {
-    //            this.getPreviousImage(currentModalImageSrc);
-    //          }
-           
-    //          if (e.target.closest('#myModalArrowRightIcon')) {
-    //            this.getNextImage(currentModalImageSrc);
-    //          }
-    //        });
-    // }
+   
 
     openModal(targetedImageSrc) {
 
